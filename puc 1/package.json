@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@grpc/grpc-js": "^1.1.4",
+    "@innotrade/enapso-graphdb-client": "^1.8.6",
+    "axios": "^0.26.1",
+    "fetch-sparql-endpoint": "^2.4.0",
+    "graphdb": "github:Ontotext-AD/graphdb.js",
+    "minimist": "^1.2.5",
+    "node-fetch": "^3.2.3",
+    "readable-stream": "^3.6.0",
+    "sparql-client": "^0.0.1",
+    "uuidv4": "^6.2.12",
+    "virtuoso-sparql-client": "^0.2.2"
+  },
+  "name": "population-codes",
+  "version": "1.0.0",
+  "main": "puc1integrv2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

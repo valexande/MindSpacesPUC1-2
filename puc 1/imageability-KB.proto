@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "google/protobuf/struct.proto";
+package unary;
+
+service Unary{
+  // A simple RPC.
+  //
+  // Obtains the MessageResponse at a given position.
+ rpc GetServerResponse(Message) returns (MessageResponse) {}
+ rpc StoreImageabilityResponse(TAMessage) returns (MessageResponse) {}
+}
+
+message Message{
+ string message = 1;
+}
+
+message TAMessage {
+     TAMessageStruct message = 1;
+}
+
+message TAMessageStruct{
+    string  va_body = 1;
+    string  ta_body = 2;
+    string  meta_body = 3;
+}
+
+message MessageResponse{
+ string message = 1;
+ bool received = 2;
+}

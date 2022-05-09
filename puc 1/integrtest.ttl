@@ -1,0 +1,395 @@
+@prefix : <http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17> .
+
+<http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasArousal
+:hasArousal rdf:type owl:ObjectProperty ;
+            rdfs:domain :Image ;
+            rdfs:range :Arousal .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasNer
+:hasNer rdf:type owl:ObjectProperty ;
+        rdfs:domain :Text ;
+        rdfs:range :Ner .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasSentence
+:hasSentence rdf:type owl:ObjectProperty ;
+             rdfs:domain :Text ;
+             rdfs:range :Sentence .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasText
+:hasText rdf:type owl:ObjectProperty ;
+         rdfs:domain :Image ;
+         rdfs:range :Text .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasURI
+:hasURI rdf:type owl:ObjectProperty ;
+        rdfs:domain :Ner ;
+        rdfs:range :URI .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasValence
+:hasValence rdf:type owl:ObjectProperty ;
+            rdfs:domain :Image ;
+            rdfs:range :Valence .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isSemSegContainer
+:isSemSegContainer rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Image ;
+                   rdfs:range :SemSegContainer .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isSemSegLabel
+:isSemSegLabel rdf:type owl:ObjectProperty ;
+               rdfs:domain :SemSegContainer ;
+               rdfs:range :SemSegLabel .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isVergeContainer
+:isVergeContainer rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Image ;
+                  rdfs:range :VergeContainer .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isVergeLabel
+:isVergeLabel rdf:type owl:ObjectProperty ;
+              rdfs:domain :VergeContainer ;
+              rdfs:range :VergeLabel .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#NerhasImageabilityScore
+:NerhasImageabilityScore rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Ner ;
+                         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasAccuracy
+:hasAccuracy rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SemSegContainer ;
+             rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasAddress
+:hasAddress rdf:type owl:DatatypeProperty ;
+            rdfs:domain :URI ;
+            rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasBegin
+:hasBegin rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Ner
+                                      :Sentence
+                                      :URI
+                                    )
+                      ] ;
+          rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasColourfulnessImageability
+:hasColourfulnessImageability rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Image ;
+                              rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasConcept
+:hasConcept rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Sentence
+                                        :URI
+                                      )
+                        ] ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasConfidence
+:hasConfidence rdf:type owl:DatatypeProperty ;
+               rdfs:domain :URI ;
+               rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasCoveredText
+:hasCoveredText rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Ner
+                                            :Sentence
+                                          )
+                            ] ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasDirection
+:hasDirection rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Image ;
+              rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasEmotag
+:hasEmotag rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Sentence ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasEmotagConfidence
+:hasEmotagConfidence rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Sentence ;
+                     rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasEnd
+:hasEnd rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Ner
+                                    :Sentence
+                                    :URI
+                                  )
+                    ] ;
+        rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasFocalLength
+:hasFocalLength rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Image ;
+                rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasFocalLengthIn35
+:hasFocalLengthIn35 rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Image ;
+                    rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasImageHeight
+:hasImageHeight rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Image ;
+                rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasImageWidth
+:hasImageWidth rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Image ;
+               rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasJSON
+:hasJSON rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Image ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasLabel
+:hasLabel rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Ner
+                                      :Sentence
+                                      :URI
+                                    )
+                      ] ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasLat
+:hasLat rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Image ;
+        rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasLng
+:hasLng rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Image ;
+        rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasPercentage
+:hasPercentage rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SemSegContainer ;
+               rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasPitch
+:hasPitch rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Image ;
+          rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasProbability
+:hasProbability rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Arousal
+                                            :Valence
+                                            :VergeContainer
+                                          )
+                            ] ;
+                rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasSegmImageability
+:hasSegmImageability rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Image ;
+                     rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasTextImageability
+:hasTextImageability rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Image ;
+                     rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasType
+:hasType rdf:type owl:DatatypeProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Sentence
+                                     :URI
+                                   )
+                     ] ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Arousal
+                                      :Valence
+                                    )
+                      ] ;
+          rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasVergeImageability
+:hasVergeImageability rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Image ;
+                      rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasVisualAnalysisTimestamp
+:hasVisualAnalysisTimestamp rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Image ;
+                            rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasXResolution
+:hasXResolution rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Image ;
+                rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasYResolution
+:hasYResolution rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Image ;
+                rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#hasZoom
+:hasZoom rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Image ;
+         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isCategory
+:isCategory rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Ner ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isLandmark
+:isLandmark rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Image ;
+            rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isLang
+:isLang rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Text ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isName
+:isName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#isText
+:isText rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Text ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#semseg_ta_contr_imageability
+:semseg_ta_contr_imageability rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :SemSegContainer ;
+                              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#verge_ta_contr_imageability
+:verge_ta_contr_imageability rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :VergeContainer ;
+                             rdfs:range xsd:double .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#Arousal
+:Arousal rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#Image
+:Image rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#Ner
+:Ner rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#SemSegContainer
+:SemSegContainer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#SemSegLabel
+:SemSegLabel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#Sentence
+:Sentence rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#Text
+:Text rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#URI
+:URI rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#Valence
+:Valence rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#VergeContainer
+:VergeContainer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#VergeLabel
+:VergeLabel rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,266 @@
+@prefix : <http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170> .
+
+<http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hasCollection
+:hasCollection rdf:type owl:ObjectProperty ;
+               rdfs:comment "A property that relates the user run with the datat collection status" ;
+               rdfs:label "hasCollection" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hasExperimentType
+:hasExperimentType rdf:type owl:ObjectProperty ;
+                   rdfs:comment "A property that relates the user run with the experiment type" ;
+                   rdfs:label "hasExperimentType" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hasItemKey
+:hasItemKey rdf:type owl:ObjectProperty ;
+            rdfs:comment "A property that relatea the user run with the item keys" ;
+            rdfs:label "hasItemKey" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hasNavigation
+:hasNavigation rdf:type owl:ObjectProperty ;
+               rdfs:comment "A property that relates the user run with the navigation data" ;
+               rdfs:label "hasNavigation" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hasNode
+:hasNode rdf:type owl:ObjectProperty ;
+         rdfs:comment "A property that indicates the nodes in a nagivation instances" ;
+         rdfs:label "hasNode" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hasSelectionKey
+:hasSelectionKey rdf:type owl:ObjectProperty ;
+                 rdfs:domain :UserRun ;
+                 rdfs:range :SelectionKey .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#collaboration
+:collaboration rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ItemKey ;
+               rdfs:range xsd:float ;
+               rdfs:comment "A property that shows the collaboration value of the key label" ;
+               rdfs:label "collaboration" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#dataCollectionStatus
+:dataCollectionStatus rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Collection ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "A property that shows the data collection status" ;
+                      rdfs:label "dataCollectionStatus" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#focusWork
+:focusWork rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ItemKey ;
+           rdfs:range xsd:float ;
+           rdfs:comment "A property that shows the focus work of the key label" ;
+           rdfs:label "focusWork" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#fusion
+:fusion rdf:type owl:DatatypeProperty ;
+        rdfs:domain :NavigationNode ;
+        rdfs:range xsd:float ;
+        rdfs:comment "A property that shows the fusion of the navigation configurations" ;
+        rdfs:label "fusion" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#gsr
+:gsr rdf:type owl:DatatypeProperty ;
+     rdfs:domain :NavigationNode ;
+     rdfs:range xsd:float ;
+     rdfs:comment "A property that shows the gsr values of the navigation configurations" ;
+     rdfs:label "gsr" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#hastype
+:hastype rdf:type owl:DatatypeProperty ;
+         rdfs:domain :SelectionKey ;
+         rdfs:range xsd:string ;
+         rdfs:comment "A property that indicates the type of the selection key (i.e., if it is collab or privacy)" ;
+         rdfs:label "hastype" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#isNull
+:isNull rdf:type owl:DatatypeProperty ;
+        rdfs:domain :ItemKey ;
+        rdfs:range xsd:string ;
+        rdfs:comment "A property that shows if the item key is null or no" ;
+        rdfs:label "isNull" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#isfavorite
+:isfavorite rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :SelectionKey ;
+            rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#item
+:item rdf:type owl:DatatypeProperty ;
+      rdfs:domain :ItemKey ;
+      rdfs:range xsd:string ;
+      rdfs:comment "A property that shows the item key label" ;
+      rdfs:label "item" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#overallDesign
+:overallDesign rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ItemKey ;
+               rdfs:range xsd:float ;
+               rdfs:comment "A property that shows the foverall design value of the key label" ;
+               rdfs:label "overallDesign" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#privacy
+:privacy rdf:type owl:DatatypeProperty ;
+         rdfs:domain :ItemKey ;
+         rdfs:range xsd:float ;
+         rdfs:comment "A property that shows the privacy value of the key label" ;
+         rdfs:label "privacy" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#rating
+:rating rdf:type owl:DatatypeProperty ;
+        rdfs:domain :NavigationNode ;
+        rdfs:range xsd:float ;
+        rdfs:comment "A property that shows the ratings of the navigation configurations" ;
+        rdfs:label "rating" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#stress
+:stress rdf:type owl:DatatypeProperty ;
+        rdfs:domain :ItemKey ;
+        rdfs:range xsd:float ;
+        rdfs:comment "A property that shows the stress value of the key label" ;
+        rdfs:label "stress" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#timestamp
+:timestamp rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Collection
+                                       :ExperimentType
+                                       :Navigation
+                                     )
+                       ] ;
+           rdfs:range xsd:float ;
+           rdfs:comment "A property that shows the timestamp" ;
+           rdfs:label "timestamp" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#type
+:title rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :ExperimentType
+                                  :Navigation
+                                  :SelectionKey
+                                )
+                  ] ;
+      rdfs:range xsd:string ;
+      rdfs:comment "A property thaat shows the type/label of the navigation and the experiment type" ;
+      rdfs:label "title" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#xcoordinate
+:xcoordinate rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :NavigationNode
+                                         :SelectionKey
+                                       )
+                         ] ;
+             rdfs:range xsd:float ;
+             rdfs:comment "A property that shows the x coordinate values of the navigation configurations" ;
+             rdfs:label "xcoordinate" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#ycoordinate
+:ycoordinate rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :NavigationNode
+                                         :SelectionKey
+                                       )
+                         ] ;
+             rdfs:range xsd:float ;
+             rdfs:comment "A property that shows the y coordinate values of the navigation configurations" ;
+             rdfs:label "ycoordinate" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#zcoordinate
+:zcoordinate rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :NavigationNode
+                                         :SelectionKey
+                                       )
+                         ] ;
+             rdfs:range xsd:float ;
+             rdfs:comment "A property that shows the z coordinate values of the navigation configurations" ;
+             rdfs:label "zcoordinate" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#Collection
+:Collection rdf:type owl:Class ;
+            rdfs:label "A class that contain information about experiment Status Change Data state" ,
+                       "Collection" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#ExperimentType
+:ExperimentType rdf:type owl:Class ;
+                rdfs:comment "A class that contains the information for the experiment Type Change Data states" ;
+                rdfs:label "ExperimentType" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#ItemKey
+:ItemKey rdf:type owl:Class ;
+         rdfs:comment "A class with the item key information" ;
+         rdfs:label "ItemKey" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#Navigation
+:Navigation rdf:type owl:Class ;
+            rdfs:comment "A class with information for the navigation configuration" ;
+            rdfs:label "Navigation" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#NavigationNode
+:NavigationNode rdf:type owl:Class ;
+                rdfs:comment "A class with information about the Navigation Node" ;
+                rdfs:label "NavigationNode" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#SelectionKey
+:SelectionKey rdf:type owl:Class ;
+              rdfs:comment "An class that contains information about the selection keys of the user run" ;
+              rdfs:label "SelectionKey" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/3/untitled-ontology-170#UserRun
+:UserRun rdf:type owl:Class ;
+         rdfs:comment "A class that contains instances for the user run" ;
+         rdfs:label "UserRun" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

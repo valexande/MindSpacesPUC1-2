@@ -1,0 +1,64 @@
+{
+	"id": "JPEG_20220204_153627_4494048047500552089.jpg", 
+	"text": "Un lloc on quedava i on quedo amb amics i companys.", 
+	"language": "ca", 
+	"result":
+    {"ner": 
+    	{"directed": true, 
+    		"type": "ner", 
+    		"label": "ner", 
+    		"nodes": [
+    			{"id": 1, "type": "concept", "label": "lloc", 
+    				"metadata": {"begin": 3, "end": 7, "category": "CONCEPT", "covered_text": "lloc"}}, 
+    			{"id": 2, "type": "concept", "label": "amics", 
+    					"metadata": {"begin": 34, "end": 39, "category": "CONCEPT", "covered_text": "amics"}}, 
+    			{"id": 3, "type": "concept", "label": "companys", 
+    				"metadata": {"begin": 42, "end": 50, "category": "CONCEPT", "covered_text": "companys"}}], 
+    		"edges": [], "metadata": {}},
+    "concept_extraction": {
+    	"directed": true, 
+    	"type": "concept", 
+    	"label": "concept extraction", 
+    	"nodes": [
+    		{"id": 4, "type": "concept", "label": "lloc", 
+    			"metadata": {"begin": 3, "end": 7, "covered_text": "lloc"}}, 
+    		{"id": 5, "type": "concept", "label": "quedava", 
+    			"metadata": {"begin": 11, "end": 18, "covered_text": "quedava"}}, 
+    		{"id": 6, "type": "concept", "label": "quedo", 
+    			"metadata": {"begin": 24, "end": 29, "covered_text": "quedo"}}, 
+    		{"id": 7, "type": "concept", "label": "amics", 
+    			"metadata": {"begin": 34, "end": 39, "covered_text": "amics"}}, 
+    		{"id": 8, "type": "concept", "label": "companys", 
+    			"metadata": {"begin": 42, "end": 50, "covered_text": "companys"}}], 
+    	"edges": [], "metadata": {}},
+    "dbpedia_linking": {
+    	"directed": true, 
+    	"type": "dbpedia", 
+    	"label": "dbpedia linking", 
+    	"nodes": [
+    		{"id": 11, "type": "dbpedia", "label": "lloc", 
+    			"metadata": {"begin": 3, "end": 7, "uri": "http://dbpedia.org/resource/Lockdown", "confidence": 0.9328642105090836, "label": "Lloc", "categories": ["other"], "types": "", "covered_text": "lockdown"}}], 
+    	"edges": [], "metadata": {}},
+    "emotion_detection": {
+    	"directed": true, 
+    	"type": "sentiment", 
+    	"label": "polarity detection", 
+    	"nodes": [
+    		{"id": 9, "type": "polarity", "label": "Un lloc on quedava i on quedo amb amics i companys.", 
+    			"metadata": {"begin": 0, "end": 51, "covered_text": "Un lloc on quedava i on quedo amb amics i companys.", "emotag": "pos", "confidence": 0.5216434959524886}}], 
+    	"edges": [], "metadata": {}},
+    "imageability_scoring":{
+    	"directed": true, 
+    	"type": "imageability", 
+    	"label": "imageability scoring", 
+    	"nodes": [
+    		{"id": 10, "type": "imageability", "label": "Un lloc on quedava i on quedo amb amics i companys.", 
+    			"metadata": {"begin": 0, "end": 51, "imageability": 5.346666666666667, "covered_text": "Un lloc on quedava i on quedo amb amics i companys.", "concept_wise_imageability": [4.33, 6.09, 5.62]}}], 
+    	"edges": [],
+    	"metadata": {
+    		"jsonContent": [{"name": "segmentation", "input": {"contribution": [0.2822998046875, 0.224456787109375, 0.20325927734375, 0.112493896484375, 0.088250732421875, 0.069927978515625, 0.01036376953125, 0.006329345703125, 0.000738525390625, 0.00068359375, 0.0005859375, 0.0005615234375, 2.44140625e-05, 2.44140625e-05], "lang": "ca", "concept_list": [["tree"], ["road"], ["building"], ["grass"], ["sky"], ["sidewalk"], ["bench"], ["car"], ["bus"], ["truck"], ["streetlight"], ["van"], ["stairs"], ["wall"]], "avgtype_for_concepts": "modif_product"}, "output": {"imageability": 6.0318669854, "final_contribution": [0.3095997683, 0.2579043365, 0.2078834454, 0.1294601508, 0.0889849573, 0.0, 0.0, 0.0041443069, 0.0008339235, 0.000748468, 0.0, 0.0004152773, 0.0, 2.53658e-05]}},
+                                 {"name": "colourfulness", "input": {"contribution": [0.2822998046875, 0.224456787109375, 0.20325927734375, 0.112493896484375, 0.088250732421875, 0.069927978515625, 0.01036376953125, 0.006329345703125, 0.000738525390625, 0.00068359375, 0.0005859375, 0.0005615234375, 2.44140625e-05, 2.44140625e-05], "colourfulness": [22.635735826237845, 8.505740585173912, 34.45423584723287, 30.52419048853266, 36.970240267362016, 16.54262509691435, 50.31528201748002, 21.892850725932778, 28.479133596664084, 19.33818522116958, 43.1487497376642, 18.385260802988064, 29.71799123380608, 35.04844901850117], "lang": "ca"}, "output": {"colour_imageability": 3.995511219164464, "overall_colourfulness": 37.101175606527164, "overall_segm_imageability": 5.013689102282232}},
+                                 {"name": "verge", "input": {"contribution": [0.3939639627933502, 0.33205193281173706], "lang": "ca", "concept_list": [["street"], ["residential", "neighborhood"]], "avgtype_for_concepts": "modif_product"}, "output": {"imageability": 6.3862791462, "final_contribution": [0.5438040581, 0.4561959419]}},
+                                 {"name": "comment", "input": {"lang": "ca", "concept_list": [["lloc"], ["amics"], ["companys"]], "avgtype_for_concepts": "modif_product", "avgtype_for_sentence": "harmonic"}, "output": {"imageability": 5.346666666666667, "concept_wise_imageability": [4.33, 6.09, 5.62]}}]}}},
+    "metadata": {"date": "2022/03/10 13:38:51", "times": {"PARSING": "13:38:45", "EMOTION": "13:38:45", "NER": "13:38:46", "CONCEPT_CANDIDATES": "13:38:46", "DBPEDIA": "13:38:51", "IMAGEABILITY": "13:38:51", "finalStep": "13:38:51"}}
+    }

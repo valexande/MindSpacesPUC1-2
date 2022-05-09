@@ -1,0 +1,15 @@
+(1)
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX : <http://www.semanticweb.org/estathop/ontologies/2021/9 untitled-ontology-17#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+delete {?o1 ?r2 ?o2} 
+where { :Captura_de_pantalla_2021-10-08_a_las_10.47.58.png ?r ?t.    
+?t ?r1 ?o1. 
+?o1 ?r2 ?o2}
+
+
+(2)
+PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX : <http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> delete {?t ?r1 ?o1} where {  :Captura_de_pantalla_2021-10-08_a_las_10.47.58.png ?r ?t. ?t ?r1 ?o1.}
+
+(3)
+PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX : <http://www.semanticweb.org/estathop/ontologies/2021/9/untitled-ontology-17#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> delete where {   :Captura_de_pantalla_2021-10-08_a_las_10.47.58.png ?r ?t.}
