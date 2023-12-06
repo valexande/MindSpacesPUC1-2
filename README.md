@@ -7,3 +7,5 @@ puc 1 folder contains everything about the needs of puc1 such as the ontology, t
 puc 2 folder contains everything about the needs of puc2 such as the ontology, the integration mechanism, the 8 queries related to this part of the knowlegde graph, and the examples from the fusion.
 
 evaluation folder contains the evaluation for the information retrieval mechanism, and the competecny questions.
+
+An extra folder for new data required for the reviews of KER, was created, namely the file `extra evaluation`.
