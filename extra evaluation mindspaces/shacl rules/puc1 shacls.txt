@@ -1,0 +1,355 @@
+:ArousalShape
+      a sh:NodeShape ;
+      sh:targetClass :Arousal ;
+    sh:property [
+        sh:path :hasProbability ;                       
+        sh:name "has probability" ;
+        sh:datatype xsd:double ;
+    ]  ;
+    sh:property [
+        sh:path :hasValue ;           
+        sh:name "has value" ;
+        sh:datatype xsd:double ;
+    ] .
+
+:ImageShape
+      a sh:NodeShape ;
+      sh:targetClass :Image ;
+    sh:property [
+        sh:path :hasArousal ;         
+        sh:maxCount 1 ;  
+        sh:name "has arousal" ;
+        sh:class :Arousal ;
+    ] ;    
+    sh:property [
+        sh:path :hasText ;         
+        sh:maxCount 1 ;  
+        sh:name "has text" ;
+        sh:class :Text ;
+    ] ;
+    sh:property [
+        sh:path :hasValene ;         
+        sh:maxCount 1 ;  
+        sh:name "has valence" ;
+        sh:class :Valence ;
+    ] ; 
+    sh:property [
+        sh:path :isSemSegContainer ;         
+        sh:maxCount 1 ;  
+        sh:name "is sem seg container" ;
+        sh:class :SemSegContainer ;
+    ] ; 
+    sh:property [
+        sh:path :isVergeContainer ;         
+        sh:maxCount 1 ;  
+        sh:name "is verge container" ;
+        sh:class :VergeContainer ;
+    ] ;
+    sh:property [
+        sh:path :hasColourfulnessImageability ;           
+        sh:name "has colourfulness imageability" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasDirection ;           
+        sh:name "has direction" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasFocalLength ;           
+        sh:name "has focal length" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :hasFocalLengthIn35 ;           
+        sh:name "has focal length in 35" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :hasImageHeight ;           
+        sh:name "has image height" ;
+        sh:datatype xsd:int ;
+    ] ;
+    sh:property [
+        sh:path :hasImageWidth ;           
+        sh:name "has image width" ;
+        sh:datatype xsd:int ;
+    ] ;
+    sh:property [
+        sh:path :hasJSON ;           
+        sh:name "has json" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasLat ;           
+        sh:name "has latitude" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasLng ;           
+        sh:name "has longitude" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasPitch ;           
+        sh:name "has pitch" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasSegmImageability ;           
+        sh:name "has segmented imageability" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasTextImageability ;           
+        sh:name "has text imageability" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasVergeImageability ;           
+        sh:name "has verge imageability" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasVisualAnalysisTimestamp ;           
+        sh:name "has visual analysis timestamp" ;
+        sh:datatype xsd:dateTimeStamp ;
+    ] ;
+    sh:property [
+        sh:path :hasXResolution ;           
+        sh:name "has x resolution" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :hasYResolution ;           
+        sh:name "has y resolution" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :hasZoom ;           
+        sh:name "has zoom" ;
+        sh:datatype xsd:dooble ;
+    ] ;
+    sh:property [
+        sh:path :isLandmark ;           
+        sh:name "is landmark" ;
+        sh:datatype xsd:boolean ;
+    ] .
+
+
+:NerShape
+      a sh:NodeShape ;
+      sh:targetClass :Ner ;
+    sh:property [
+        sh:path :hasURI ;         
+        sh:maxCount 1 ;  
+        sh:name "is uri" ;
+        sh:class :URI ;
+    ] ;
+    sh:property [
+        sh:path :hasBegin ;           
+        sh:name "has begin" ;
+        sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path :hasEnd ;           
+        sh:name "has end" ;
+        sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path :hasCoveredText ;           
+        sh:name "has covered text" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasLabel ;           
+        sh:name "has label" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :isCategory ;           
+        sh:name "has category" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :NerhasImageabilityScore ;           
+        sh:name "ner has imageability score" ;
+        sh:datatype xsd:double ;
+    ] .
+
+
+:SemSegContainerShape
+      a sh:NodeShape ;
+      sh:targetClass :SemSegContainer ;
+    sh:property [
+        sh:path :isSemSegLabel ;         
+        sh:maxCount 1 ;  
+        sh:name "is sem seg label" ;
+        sh:class :SemSegLabel ;
+    ] ;
+    sh:property [
+        sh:path :hasAccuracy ;           
+        sh:name "has accuracy" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasPercentage ;           
+        sh:name "has percentage" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :semseg_ta_contr_imageability ;           
+        sh:name "has sem seg ta contr imageability" ;
+        sh:datatype xsd:float ;
+    ] .
+
+:SemSegLabelShape
+      a sh:NodeShape ;
+      sh:targetClass :SemSegLabel .
+
+:SentenceShape
+      a sh:NodeShape ;
+      sh:targetClass :Sentence ;
+    sh:property [
+        sh:path :hasBegin ;           
+        sh:name "has begin" ;
+        sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path :hasEnd ;           
+        sh:name "has end" ;
+        sh:datatype xsd:integer ;
+    ] ; 
+    sh:property [
+        sh:path :hasConcept ;           
+        sh:name "has concept" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasCoveredText ;           
+        sh:name "has covered text" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasEmotag ;           
+        sh:name "has emo tag" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasEmotagConfidence ;           
+        sh:name "has emo tag confidence" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasLabel ;           
+        sh:name "has label" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasType ;           
+        sh:name "has type" ;
+        sh:datatype xsd:string ;
+    ] .
+
+:TextShape
+      a sh:NodeShape ;
+      sh:targetClass :Text ;
+    sh:property [
+        sh:path :hasNer ;  
+        sh:name "is ner" ;
+        sh:class :Ner ;
+    ] ;
+    sh:property [
+        sh:path :hasSentence ;  
+        sh:name "has sentence" ;
+        sh:class :Sentence ;
+    ] ;
+    sh:property [
+        sh:path :isLang ;           
+        sh:name "is lang" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :isText ;           
+        sh:name "is text" ;
+        sh:datatype xsd:string ;
+    ] .
+
+
+:URIShape
+      a sh:NodeShape ;
+      sh:targetClass :URI ;
+    sh:property [
+        sh:path :hasAddress ;           
+        sh:name "has address" ;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
+        sh:path :hasBegin ;           
+        sh:name "has begin" ;
+        sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path :hasEnd ;           
+        sh:name "has end" ;
+        sh:datatype xsd:integer ;
+    ] ; 
+    sh:property [
+        sh:path :hasConcept ;           
+        sh:name "has concept" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasConfidence ;           
+        sh:name "has confidence" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :hasLabel ;           
+        sh:name "has label" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasType ;           
+        sh:name "has type" ;
+        sh:datatype xsd:string ;
+    ] .
+
+
+:ValenceShape
+      a sh:NodeShape ;
+      sh:targetClass :Valence ;
+    sh:property [
+        sh:path :hasProbability ;           
+        sh:name "has probability" ;
+        sh:datatype xsd:double ;
+    ] ;    
+    sh:property [
+        sh:path :hasValue ;           
+        sh:name "has value" ;
+        sh:datatype xsd:double ;
+    ] .
+
+:VergeContainerShape
+      a sh:NodeShape ;
+      sh:targetClass :VergeContainer ;
+    sh:property [
+        sh:path :isVergeLabel ;  
+        sh:maxCount 1 ; 
+        sh:name "is verge label" ;
+        sh:class :VergeLabel ;
+    ] ;
+    sh:property [
+        sh:path :hasProbability ;           
+        sh:name "has probability" ;
+        sh:datatype xsd:double ;
+    ] ;
+    sh:property [
+        sh:path :verge_ta_contr_imageability ;           
+        sh:name "verge ta contr imageability" ;
+        sh:datatype xsd:double ;
+    ] .
+
+:VergeLabelShape
+      a sh:NodeShape ;
+      sh:targetClass :VergeLabel .

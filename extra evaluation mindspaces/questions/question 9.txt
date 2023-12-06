@@ -1,0 +1,20 @@
+Is the label 'Flowers' related with the object 'Roses, Tulips, Daisies'?
+Is the label 'Furniture' related with the object 'Chairs, Tables, Sofas'?
+Is the label 'Fruit' related with the object 'Apples, Oranges, Bananas'?
+Is the label 'Vehicles' related with the object 'Cars, Bicycles, Trucks'?
+Is the label 'Books' related with the object 'Novels, Magazines, Cookbooks'?
+Is the label 'Electronics' related with the object 'Smartphones, Laptops, Cameras'?
+Is the label 'Animals' related with the object 'Dogs, Cats, Birds'?
+Is the label 'Clothing' related with the object 'Shirts, Pants, Dresses'?
+Is the label 'Food' related with the object 'Pizza, Burgers, Sushi'?
+Is the label 'Music' related with the object 'Guitars, Drums, Pianos'?
+Is the label 'Art' related with the object 'Paintings, Sculptures, Drawings'?
+Is the label 'Sports' related with the object 'Soccer, Basketball, Tennis'?
+Is the label 'Technology' related with the object 'Computers, Gadgets, Robots'?
+Is the label 'Nature' related with the object 'Mountains, Rivers, Forests'?
+Is the label 'Travel' related with the object 'Airplanes, Beaches, Landmarks'?
+Is the label 'Appliances' related with the object 'Refrigerators, Washing Machines, Microwaves'?
+Is the label 'Jewelry' related with the object 'Rings, Necklaces, Bracelets'?
+Is the label 'Architecture' related with the object 'Skyscrapers, Bridges, Temples'?
+Is the label 'Toys' related with the object 'Dolls, Legos, Toy Cars'?
+Is the label 'Health' related with the object 'Exercise, Nutrition, Mental Health'?

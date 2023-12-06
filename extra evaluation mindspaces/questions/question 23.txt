@@ -1,0 +1,20 @@
+Is the phrase "Empty Office Desks" related to the sentiment of sadness?
+Is the phrase "Lonely Cafe Corner" related to the sentiment of sadness?
+Is the phrase "Abandoned Meeting Room" related to the sentiment of sadness?
+Is the phrase "Deserted Library Aisles" related to the sentiment of sadness?
+Is the phrase "City Park Solitude" related to the sentiment of sadness?
+Is the phrase "Closed Art Gallery" related to the sentiment of sadness?
+Is the phrase "Neglected Office Cubicles" related to the sentiment of sadness?
+Is the phrase "Quiet Marketplace" related to the sentiment of sadness?
+Is the phrase "Cafe Tables in Silence" related to the sentiment of sadness?
+Is the phrase "Empty Business Seminar" related to the sentiment of sadness?
+Is the phrase "Abandoned Bookstore Shelves" related to the sentiment of sadness?
+Is the phrase "Deserted Park Benches" related to the sentiment of sadness?
+Is the phrase "Unoccupied Cubicles" related to the sentiment of sadness?
+Is the phrase "City Streets in Silence" related to the sentiment of sadness?
+Is the phrase "Library in Desolation" related to the sentiment of sadness?
+Is the phrase "Corporate Lobby in Solitude" related to the sentiment of sadness?
+Is the phrase "Empty Cafe Chairs" related to the sentiment of sadness?
+Is the phrase "Marketplace in Stillness" related to the sentiment of sadness?
+Is the phrase "Office Isolation" related to the sentiment of sadness?
+Is the phrase "Quiet Library Atmosphere" related to the sentiment of sadness?

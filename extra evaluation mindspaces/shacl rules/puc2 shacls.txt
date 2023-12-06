@@ -1,0 +1,216 @@
+:CollectionShape
+      a sh:NodeShape ;
+      rdfs:label "A class that contain information about experiment Status Change Data state" ;
+      sh:targetClass :Collection ;				  	
+    sh:property [
+        sh:path :dataCollectionStatus;				
+        sh:name "data collection status" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :timestamp ;						  
+        sh:name "timestamp" ;
+        sh:datatype xsd:float ;
+    ] .
+
+
+:ExperienceTypeShape
+      a sh:NodeShape ;
+      rdfs:label "A class that contains the information for the experiment Type Change Data states" ;
+      sh:targetClass :ExperienceType ; 
+    sh:property [
+        sh:path :timestamp ;                          
+        sh:name "timestamp" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :title ;                          
+        sh:name "title" ;
+        sh:datatype xsd:string ;
+    ] .   
+
+
+:ItemKeyShape
+      a sh:NodeShape ;
+      rdfs:label "A class with the item key information" ;
+      sh:targetClass :ItemKey ;
+    sh:property [
+        sh:path :collaboration ;                          
+        sh:name "collaboration" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :focusWork ;                          
+        sh:name "focus work" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :isNull ;                          
+        sh:name "isNull" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :item ;                          
+        sh:name "item" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :overallDesign ;                          
+        sh:name "overall design" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :privacy ;                          
+        sh:name "privacy" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :stress ;                          
+        sh:name "stress" ;
+        sh:datatype xsd:float ;
+    ] .
+
+:NavigationShape
+      a sh:NodeShape ;
+      rdfs:label "A class with information for the navigation configuration" ;
+      sh:targetClass :Navigation ;
+    sh:property [
+        sh:path :hasNode ;                                 
+        sh:name "has node" ;
+        sh:class :NavigationNode ;
+    ] ;
+    sh:property [
+        sh:path :timestamp ;                          
+        sh:name "timestamp" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :title ;                          
+        sh:name "title" ;
+        sh:datatype xsd:string ;
+    ] . 
+
+
+:NavigationNodeShape
+      a sh:NodeShape ;
+      rdfs:label "A class with information about the Navigation Node" ;
+      sh:targetClass :NavigationNode ;
+    sh:property [
+        sh:path :fusion ;                          
+        sh:name "fusion" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :gsr ;                         
+        sh:name "gsr" ;
+        sh:datatype xsd:float ;
+    ] ; 
+    sh:property [
+        sh:path :rating ;						    
+        sh:name "rating" ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path :xcoordinate ;						 
+        sh:name "x coordinate" ;
+        sh:datatype xsd:float ;
+    ]  ;
+    sh:property [
+        sh:path :ycoordinate ;                       
+        sh:name "y coordinate" ;
+        sh:datatype xsd:float ;
+    ]  ;
+    sh:property [
+        sh:path :zcoordinate ;                       
+        sh:name "z coordinate" ;
+        sh:datatype xsd:float ;
+    ]  .
+
+
+:SelectionKeyShape
+      a sh:NodeShape ;
+      rdfs:label "An class that contains information about the selection keys of the user run" ;
+      sh:targetClass :SelectionKey ;
+    sh:property [
+        sh:path :hastype ;                       
+        sh:name "has type" ;
+        sh:datatype xsd:string ;
+    ]  ;
+    sh:property [
+        sh:path :isfavorite ;                       
+        sh:name "is favorite" ;
+        sh:datatype xsd:bolean ;
+    ]  ;
+    sh:property [
+        sh:path :title ;                          
+        sh:name "title" ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :xcoordinate ;                       
+        sh:name "x coordinate" ;
+        sh:datatype xsd:float ;
+    ]  ;
+    sh:property [
+        sh:path :ycoordinate ;                       
+        sh:name "y coordinate" ;
+        sh:datatype xsd:float ;
+    ]  ;
+    sh:property [
+        sh:path :zcoordinate ;                       
+        sh:name "z coordinate" ;
+        sh:datatype xsd:float ;
+    ]  . 
+
+
+
+:UserRunShape
+      a sh:NodeShape ;
+      rdfs:label "A class that contains instances for the user run" ;
+      sh:targetClass :UserRun ;
+    sh:property [
+        sh:path :hasCollection ;                                  
+        sh:name "has collection" ;
+        sh:class :Collection ;
+    ] ;
+    sh:property [
+        sh:path :hasExperimentType ;         
+        sh:maxCount 1 ;  
+        sh:name "has experiment type" ;
+        sh:class :ExperimentType ;
+    ] ;
+    sh:property [
+        sh:path :hasItemKey ;           
+        sh:name "has item key" ;
+        sh:class :ItemKey ;
+    ] ;
+    sh:property [
+        sh:path :hasNavigation ;           
+        sh:name "has navigation" ;
+        sh:class :Navigation ;
+    ] ;
+    sh:property [
+        sh:path :hasSelectionKey ;           
+        sh:name "has selection key" ;
+        sh:class :SelectionKey ;
+    ] ;
+    sh:property [
+        sh:path :driver ;                       
+        sh:name "driver" ;
+        sh:datatype xsd:int ;
+    ]  ;
+    sh:property [
+        sh:path :guardian ;                       
+        sh:name "guardian" ;
+        sh:datatype xsd:int ;
+    ]  ;
+    sh:property [
+        sh:path :integrator ;                       
+        sh:name "integrator" ;
+        sh:datatype xsd:int ;
+    ]  ;
+    sh:property [
+        sh:path :pioneer ;                       
+        sh:name "pioneer" ;
+        sh:datatype xsd:int ;
+    ]  .
