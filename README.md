@@ -8,4 +8,4 @@ puc 2 folder contains everything about the needs of puc2 such as the ontology, t
 
 evaluation folder contains the evaluation for the information retrieval mechanism, and the competecny questions.
 
-An extra folder for new data required for the reviews of KER, was created, namely the file `extra evaluation`.
+An extra folder for new data required for the reviews of KER, was created, namely the file `extra evaluation mindspaces`.
